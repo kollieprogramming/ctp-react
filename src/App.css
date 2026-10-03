@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  font-family: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  background: linear-gradient(135deg, #111827, #2563eb);
   color: white;
+  padding: 80px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0 0 18px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #dbeafe;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-header h2 {
+  margin: 8px 0 0;
+  font-size: 32px;
+}
+
+.count {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* =========================
+   EXERCISE CARD
+========================= */
+
+.exercise-card {
+  width: 100%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.exercise-card:active {
+  transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.tp-number {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.arrow {
+  color: #9ca3af;
+  font-size: 22px;
+  transition: color 0.2s ease;
+}
+
+.exercise-card:hover .arrow {
+  color: #2563eb;
+}
+
+.exercise-card h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  color: #172033;
+}
+
+.exercise-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 68px;
+  margin-bottom: 0;
+}
+
+.exercise-card strong {
+  color: #374151;
+}
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.card-footer span {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* =========================
+   EXERCISE VIEW
+========================= */
+
+.exercise-view {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.back-button {
+  border: none;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+}
+
+.exercise-header {
+  margin-top: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.exercise-header h2 {
+  font-size: 32px;
+  margin: 15px 0 8px;
+}
+
+.exercise-header p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.exercise-demo {
+  margin-top: 30px;
+  padding: 30px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  min-height: 180px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  background: white;
+  text-align: center;
+  padding: 25px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .exercise-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exercise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 55px 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .exercise-view {
+    padding: 22px;
+  }
+
+  .exercise-header h2 {
+    font-size: 26px;
   }
 }
