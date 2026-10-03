@@ -8,19 +8,19 @@ function Galerie() {
     <div>
       <h2>Galerie</h2>
 
-      <img src={img1} alt="Image 1" width="150" />
-      <img src={img2} alt="Image 2" width="150" />
-      <img src={img3} alt="Image 3" width="150" />
+      <img src={img1} alt="Paysage montagneux" width="150" />
+      <img src={img2} alt="Paysage naturel" width="150" />
+      <img src={img3} alt="Paysage extérieur" width="150" />
 
       <img
         src="https://picsum.photos/id/1015/150"
-        alt="Externe 1"
+        alt="Paysage depuis une source externe"
         width="150"
       />
 
       <img
         src="https://picsum.photos/id/1016/150"
-        alt="Externe 2"
+        alt="Autre paysage depuis une source externe"
         width="150"
       />
     </div>
